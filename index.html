@@ -1,46 +1,581 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="likelion.css">
-		<title>likelion html/css basic</title>
-	</head>
-	<body>
-		<div class="container">
-			<div id="nav">
-				<h1>likelion</h1>
-				<a href="#">home</a>
-				<a href="#">index</a>
-				<a href="#">info</a>
-				<a href="#">blog</a>
-			</div>
-		
-			<div id="header">
-				<h2>웹이 가장 쉽다???!!!! 난 어려워...</h2>
-				<p> 일단 꾸미는것보다는 연습중.....</p>
-				<p> TOEIC 하기 싫다.... </p>
-			</div>
-		
-			<div id="section" >
-				<div id="article">
-					<img style="width:310px; height:310px;" src="image/image3.jpg">
-					<p>남녀 호불호가 안 갈리는 삼겹살!! 안 좋아하는 사람있으면 그 사람이 이상한거 </p>
-				</div>
-				
-				<div id="article">
-					<img style="width:310px; height:310px;" src="image/image4.jpg">
-					<p>소주 안주로 진짜 좋은 회... 난 진짜 회를 1주일에 2번이상은 먹어....</p>
-				</div>
-				
-				<div id="article">
-					<img style="width:310px; height:310px;" src="image/image5.jpg">
-					<p>쓴거 어찌 다 술안주 같긴한데, 맛있는데 어떻게? 맛있는거 먹으면 좋지 않나요??</p>
-				</div>
-			</div>
-		
-			<div id="footer">
-				<p>Copyright &copy; LikeLionHansol, 2017</p>
-			</div>
-		</div>	
-	</body>
+<html lang="kr">
+<head>
+    <meta charset="utf-8"> <!-- 한글 깨지는거 방지 --> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- 타이틀에 icon 넣기 -->
+    <link href="img/likelion.ico" rel="shortcut icon">
+    <title>멋쟁이 사자처럼 X 한성대학교</title>
+    
+    <!-- style.css -->
+    <link href="css/style.css" rel="stylesheet">
+   
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    
+</head>
+
+<body id="page-top" class="index" onload="startClock()">
+  
+    <!--최상단바-->
+    <div style="background:#293e6b; color:#FFFFFF; width: 100%; position:fixed;">
+        <!--높이가 30px-->
+        <div style="text-align:right; margin-right:70px;">
+            문의하기 : likelionhansol@likelion.org &nbsp &nbsp &nbsp 카카오톡 : ah405khs@naver.com
+            
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top affix">
+        <div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top" style="margin-left:50px">likelion X Hansung </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-right:70px;">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about"><span class="glyphicon glyphicon glyphicon-bullhorn" aria-hidden="true"></span> About</a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="#team"><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span> Team</a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="#video"><span class="glyphicon glyphicon glyphicon-expand" aria-hidden="true"></span> Video</a>
+                    </li>
+                    
+                    <li>
+                        <a class="page-scroll" href="#portfolio"><span class="glyphicon glyphicon glyphicon-credit-card" aria-hidden="true"></span> Service</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact"><span class="glyphicon glyphicon glyphicon-earphone" aria-hidden="true"></span> Contact</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="intro-text" id="#head_Text">
+            <div class="intro-heading intro_right" style="text-align:right; font-size:40px; margin-bottom:0; margin-right:50px">개발자로서 꿈을 실현하라!</div>
+            <div class="intro-heading intro_right" style="text-align:right; font-size:40px; margin-bottom:0; margin-right:50px">한번 해봐 후회안할거야!</div>
+             <div class="intro-lead-in" style="color:orange; text-align:right; margin-top:0px; margin-bottom:0; margin-right:50px">Hansung in Likelion!</div>
+             <div class = "intro-heading" id="Display_clock" style="text-align:right; margin-right:50px; margin-top:80px"></div>
+        </div>
+    </header>
+    
+     <!-- About Section -->
+   
+    <section id="about">
+      <a href="#about" class="page-scroll ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted"><b><ins>비전공자가 딱! 90일만에</ins></b> 개발자가 된다?</h3>
+                </div>
+            </div>
+            <div class="row"style="text-align:left">
+                <div class="col-lg-12">
+                    <ul class="timeline slideanim">
+                        <li class="slideanim">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.png" alt=""style="background-color:#FFEEAD">
+                            </div>
+                            
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>STUDY</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">HTML/CSS부터 jQuery까지의 Front-end, Ruby on Rails와 같은 Web Framework를 공부합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted slideanim">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.png" alt="" style="background-color:#FFEEAD">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>SERVICE</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">평소에 "이런 IT 서비스를 꼭 만들어 보고 싶었다." 라고 생각했던 것들을 본인이 직접 구현합니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slideanim">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.png" alt="" style="background-color:#FFEEAD">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3>NETWORK</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">나와 비슷한 생각을 가진 대학교 친구들을 만날 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </li>
+                       <li class="slideanim">
+                            <div class="timeline-image">
+                                <img style = "max-width: 100%; height: 100%; background-color:#FFEEAD"class="img-circle img-responsive" src="img/about/4.png" alt="" >
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Hansung Likelion Team</h2>
+                    <h3 class="section-subheading text-muted">Hansung University First Team</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member slideanim">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="aaa">
+                        <h4>a a a</h4>
+                        <p class="text-muted">Leader</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member slideanim">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="a a a">
+                        <h4>a a a</h4>
+                        <p class="text-muted">memeber</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member slideanim">
+                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="aaa">
+                        <h4>a a a</h4>
+                        <p class="text-muted">member</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm-4">
+                    <div class="team-member slideanim">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="a a a">
+                        <h4>a a a</h4>
+                        <p class="text-muted">member</p>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="team-member slideanim">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="aaa">
+                        <h4>a a a</h4>
+                        <p class="text-muted">member</p>
+                    </div>
+                </div>
+                 <div class="col-sm-4">
+                    <div class="team-member slideanim">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="aaa">
+                        <h4>a a a</h4>
+                        <p class="text-muted">member</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="bg-light-gray">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+            <h2 class="section-heading"> Video </h2>
+            <h3 class="section-subheading text-muted">멋쟁이 사자처럼 관련 동영상</h3>
+            </div>
+      					<div class="col-xs-6 col-md-4">
+      						<iframe width="100%" height="500" src="https://www.youtube.com/embed/jhGT8xKrY4o" 
+      						frameborder="0" allowfullscreen></iframe>
+      					</div>
+      
+      					<div class="col-xs-6 col-md-4">
+      						<iframe width="100%" height="500" src="https://www.youtube.com/embed/orCJuEsu0bA"
+      						frameborder="0" allowfullscreen></iframe>
+      					</div>
+      
+      					<div class="col-xs-6 col-md-4">
+      						<iframe width="100%" height="500" src="https://www.youtube.com/embed/z_BqT50g6qM"
+      						frameborder="0" allowfullscreen></iframe>
+      					</div>
+  			    </div>
+        </div>
+    </section>
+    
+  
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Service</h2>
+                    <h3 class="section-subheading text-muted">멋쟁이사자처럼이 출신이 만든 서비스</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <!-- 아래 서비스에 서비스 링크를 넣자 -->
+                    <a href="http://codestudy.kr" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/codestudy.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>코드 스터디</h4>
+                        <p class="text-muted">웹개발의 첫 단추</p>
+                    </div>
+                </div>
+              
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://codelion.net" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/codelion.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>코드 라이언</h4>
+                        <p class="text-muted">온라인 프로그래밍 교육</p>
+                    </div>
+                </div>
+            
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://www.banksalad.com/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/banksalad.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>BankSalad</h4>
+                        <p class="text-muted">가장 합리적인 카드 추천 가이드</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://bepro11.com/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/beproll.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>BePro11</h4>
+                        <p class="text-muted">축구 기록 관리 시스템</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://www.danspot.kr/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/danspot.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>댄스팟</h4>
+                        <p class="text-muted">스트릿 댄스 및 학원 모음 사이트</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://www.eazel.io/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/eazel.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>이젤</h4>
+                        <p class="text-muted">VR을 통한 가상 전시 플랫폼</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://gliter.me/post" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/gliter.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Gliter</h4>
+                        <p class="text-muted">뷰티 컨텐츠에서 예약까지</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://gosomi.com/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/gosomi.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>고소미닷컴</h4>
+                        <p class="text-muted">건전한 사이버문화를 지향합니다.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://jasoseol.com/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/jaso.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>자소설닷컴</h4>
+                        <p class="text-muted">자기소개서 토탈솔루션</p>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://www.facebook.com/mersmap/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        
+                        <img src="img/portfolio/mersmap.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Mers map</h4>
+                        <p class="text-muted">메르스 확산지도</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://microstream.kr/intrasite/carinlink.html" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/microstream.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>MicroStream</h4>
+                        <p class="text-muted">소리를 퍼트려라!</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://www.sentbe.com/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/santebe.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>SENTBE</h4>
+                        <p class="text-muted">해외송금을 국내송금처럼</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="https://www.wingeat.com/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/shoplink.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>ShopLink</h4>
+                        <p class="text-muted">나에게 맞는 상품을 한번에</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://taling.me/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/taling.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>탈잉</h4>
+                        <p class="text-muted">1등 대학생 과외 포털</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://gangmom.kr/" class="portfolio-link" data-toggle="modal" target="_blank">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/mon.jpg" class="img-responsive">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>강남엄마</h4>
+                        <p class="text-muted">학원 정보 플랫폼</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+        <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/contact/facebook1.JPG">
+                    </div>
+                    <h5 class="section-subheading text-muted">멋쟁이 사자처럼 at 한성대학교</h5>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/contact/mail.JPG">
+                    </div>
+                    <h5 class="section-subheading text-muted">likelionhansol@likelion.org</h5>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/contact/phone.JPG">
+                    </div>
+                     <h5 class="section-subheading text-muted">010-5102-5250(김한솔)</h5>
+                </div>
+        </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/agency.js"></script>
+    <script src="js/now_time.js"></script>
+    <script src="js/showup_slide.js"></script>
+    <script src="js/googlemaps.js"></script>
+    <script>
+     /* function initialize(){
+        var zoomLevel = 14;  // 지도 확대 레벨. 숫자 높을 수록 확대됨
+            markerTitle = "한성대"; // 현재 위치 마커에 마우스 올릴 시 나타나는 정보
+            markerMaxWidth = 200; // 말풍선 최대 크기
+      
+        var contentString = '<div>' + '<h2>한성대학교</h2>' + '<p>Hansung University</p>' + '</div>';
+        var myLatlng = new google.maps.LatLng(37.484125, 127.063063);
+        var mapOptions = {
+          zoom : zoomLevel,
+          center : myLatlng,
+          scrollwheel:false,
+          mapTypeId : google.maps.MapTypeId.ROADMAP
+      
+        }
+        var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+        var marker = new google.maps.Marker(
+          {
+            position : myLatlng,
+            map : map,
+            title : markerTitle
+          });
+      
+        var infowindow = new google.maps.InfoWindow(
+          {
+            content : contentString,
+            maxWidth : markerMaxWidth
+          });
+      
+        google.maps.event.addListener(marker, 'click', function(){
+          infowindow.open(map, marker);
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize); */
+    </script>
+</body>
 </html>
+
